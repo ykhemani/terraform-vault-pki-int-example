@@ -181,3 +181,7 @@ EOT
 ```
 
 Please note that the Terraform state contains the CSR, which is also provided as an output. It does NOT contain the private key for the CA because it is internal to the CA.
+
+### Next Steps
+
+After you get the CSR from the process above, you can have your external CA sign that CA. The result will be a certificate for the Intermediate CA we created above. You can then set that via the [vault_pki_secret_backend_intermediate_set_signed](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/pki_secret_backend_intermediate_set_signed) resource.
