@@ -1,0 +1,2 @@
+domain    = "example.com"
+pki_mount = "pki-int"
